@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {JockeList} from "./components/JokeList/JokeList";
+import {Header} from "./components/Header/Header";
+import {useDispatch, useSelector} from "react-redux";
+import {CREATE_NEW_JOKE} from "./redux/types";
+import {getNewJoke} from "./services";
+
 
 function App() {
+    const dispatch = useDispatch()
+    const jokes = useSelector(state => state)
+
+    const handleCreateNewJoke = () => {
+    dispatch({type:CREATE_NEW_JOKE})
+    }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <Header/>
+      <JockeList handleCreateNewJoke={handleCreateNewJoke} jokes={jokes}/>
     </div>
   );
 }

@@ -1,0 +1,1 @@
+export const CREATE_NEW_JOKE = 'CREATE_NEW_JOKE'
