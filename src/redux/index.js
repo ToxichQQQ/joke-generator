@@ -5,12 +5,14 @@ import {getNewJoke} from "../services";
 const reducer = (state = [],action) => {
     switch (action.type) {
         case CREATE_NEW_JOKE:
-            const result = getNewJoke()
+            const result = getNewJoke().data
             console.log(result)
-            return [...state,{id:state.length}]
+            return [...state,{ result}]
         default:
             return state
     }
 }
+
+
 
 export const store = createStore(reducer)

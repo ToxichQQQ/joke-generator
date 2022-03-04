@@ -4,9 +4,9 @@ import {JokeCard} from "../JokeCard/JokeCard";
 import {Button} from "../Button/Button";
 
 
-export function JockeList({jokes,handleCreateNewJoke}) {
+export function JockeList({jokes}) {
     return <div className={styles.list}>
-        <Button onClick={handleCreateNewJoke}/>
+        <Button/>
         <JokeCard/>
     </div>
 }

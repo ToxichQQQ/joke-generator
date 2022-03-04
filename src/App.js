@@ -2,22 +2,19 @@ import React from 'react'
 import {JockeList} from "./components/JokeList/JokeList";
 import {Header} from "./components/Header/Header";
 import {useDispatch, useSelector} from "react-redux";
-import {CREATE_NEW_JOKE} from "./redux/types";
-import {getNewJoke} from "./services";
+import {createNewJoke} from "./redux/actions";
+import {link} from "./untils";
+
 
 
 function App() {
-    const dispatch = useDispatch()
     const jokes = useSelector(state => state)
 
-    const handleCreateNewJoke = () => {
-    dispatch({type:CREATE_NEW_JOKE})
-    }
-
+console.log(jokes)
   return (
     <div>
         <Header/>
-      <JockeList handleCreateNewJoke={handleCreateNewJoke} jokes={jokes}/>
+      <JockeList jokes={jokes}/>
     </div>
   );
 }
