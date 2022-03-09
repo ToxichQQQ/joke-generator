@@ -7,6 +7,6 @@ import {Button} from "../Button/Button";
 export function JockeList({jokes}) {
     return <div className={styles.list}>
         <Button/>
-        <JokeCard/>
+       {jokes.map(joke => <JokeCard/>)}
     </div>
 }
