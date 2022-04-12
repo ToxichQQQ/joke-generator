@@ -17,14 +17,11 @@ I created this app in order to learn new technologies, such as Redux-Saga and Re
 
 To test the application, you need to enter the following commands:
 
-You need to clone the repository using the command:
-#####`git@github.com:ToxichQQQ/joke-generator.git`
+You need to clone the repository using the command:`git@github.com:ToxichQQQ/joke-generator.git`
 
-After the repository has been copied, go to the repository and run the 
-#####`npm install command`.
+After the repository has been copied, go to the repository and run the `npm install command`.
 
-Start the application using the 
-#####`npm start`
+Start the application using the `npm start`
 
 
 # Thanks for your attention
