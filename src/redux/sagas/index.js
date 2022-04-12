@@ -5,7 +5,7 @@ import { takeEvery,put,call } from 'redux-saga/effects'
 export function* workerSaga() {
     const data = yield call(getNewJoke)
 
-    yield put({type:ADD_NEW_JOKE,payload:{id:data.id,text:data.value,url:data.icon_url}})
+    yield put({type:ADD_NEW_JOKE,payload:{id:data.id + data.created_at,text:data.value}})
 }
 
 export function* watchSaga() {

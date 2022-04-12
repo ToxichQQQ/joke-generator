@@ -4,7 +4,7 @@ import {JokeCard} from "../JokeCard/JokeCard";
 import {Button} from "../Button/Button";
 
 
-export function JockeList({jokes}) {
+export function JokeList({jokes}) {
     return(
     <div className={styles.container}>
         <div className={styles.button}>
