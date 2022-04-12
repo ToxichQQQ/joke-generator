@@ -1,6 +1,25 @@
-.list{
-    width: 85vw;
+.list {
     margin: 0 auto;
     display: flex;
     align-items: flex-start;
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "button jokeList jokeList" "button jokeList jokeList" "button jokeList jokeList";
+}
+
+.button {
+    grid-area: button;
+    margin:0 auto;
+}
+
+.jokeList {
+    grid-area: jokeList;
+    display: flex;
+    flex-wrap: wrap;
 }

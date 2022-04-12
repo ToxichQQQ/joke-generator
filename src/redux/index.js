@@ -1,18 +1,17 @@
-import {createStore} from "redux";
-import {CREATE_NEW_JOKE} from "./types";
-import {getNewJoke} from "../services";
-
-const reducer = (state = [],action) => {
-    switch (action.type) {
-        case CREATE_NEW_JOKE:
-            const result = getNewJoke().data
-            console.log(result)
-            return [...state,{ result}]
-        default:
-            return state
-    }
-}
+import {createStore,applyMiddleware} from "redux";
+import createSagaMiddleware from 'redux-saga'
+import {jokeReducer} from "./reducers/jokeReducer";
+import {rootSaga} from "./sagas";
 
 
+const sagaMiddleware = createSagaMiddleware()
 
-export const store = createStore(reducer)
+const store = createStore(jokeReducer,applyMiddleware(sagaMiddleware))
+
+
+sagaMiddleware.run(rootSaga)
+
+export default store
+
+
+

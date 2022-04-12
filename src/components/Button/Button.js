@@ -1,12 +1,14 @@
 import React from "react";
 import styles from './Button.module.css'
 import {useDispatch} from "react-redux";
-import {createNewJoke} from "../../redux/actions";
+import { GET_NEW_JOKE} from "../../redux/types";
 
 export function Button() {
  const dispatch = useDispatch()
- const handleCreateNewJoke = () => {
-  dispatch(createNewJoke())
+
+ const handleAddNewJoke = () => {
+  dispatch({type:GET_NEW_JOKE})
  }
- return <button onClick={() => handleCreateNewJoke()} className={styles.button}>More</button>
+
+ return <button onClick={handleAddNewJoke} className={styles.button}>More</button>
 }

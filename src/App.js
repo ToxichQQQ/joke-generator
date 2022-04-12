@@ -1,16 +1,18 @@
 import React from 'react'
 import {JockeList} from "./components/JokeList/JokeList";
 import {Header} from "./components/Header/Header";
-import {useDispatch, useSelector} from "react-redux";
-import {createNewJoke} from "./redux/actions";
 import {link} from "./untils";
+import {useSelector} from "react-redux";
 
 
 
 function App() {
-    const jokes = useSelector(state => state)
+const jokes = useSelector(state => state)
 
 console.log(jokes)
+
+
+
   return (
     <div>
         <Header/>

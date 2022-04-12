@@ -5,8 +5,14 @@ import {Button} from "../Button/Button";
 
 
 export function JockeList({jokes}) {
-    return <div className={styles.list}>
-        <Button/>
-       {jokes.map(joke => <JokeCard/>)}
+    return(
+    <div className={styles.container}>
+        <div className={styles.button}>
+            <Button/>
+        </div>
+        <div className={styles.jokeList}>
+            {jokes.map(joke => <JokeCard key={joke.id} joke={joke}/>)}
+        </div>
     </div>
+    )
 }
