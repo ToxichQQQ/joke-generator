@@ -8,7 +8,7 @@ export const jokeReducer = (state = [], action) => {
       return newState;
     case LOAD_ALL_JOKES:
       const jokeList = JSON.parse(localStorage.getItem("jokes"));
-      return jokeList;
+      return jokeList || [];
     default:
       return state;
   }
