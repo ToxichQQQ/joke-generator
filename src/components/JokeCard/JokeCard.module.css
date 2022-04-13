@@ -1,9 +1,9 @@
-.card{
-    padding: 12px 16px;
-    font-size: 14px;
-    border: 1px solid grey;
-    border-radius: 8px;
-    margin: 0 16px 16px;
-    width: 240px;
-    line-height: 1.25rem;
+.card {
+  padding: 12px 16px;
+  font-size: 14px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  margin: 0 16px 16px;
+  width: 240px;
+  line-height: 1.25rem;
 }

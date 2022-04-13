@@ -4,7 +4,7 @@ I created this app in order to learn new technologies, such as Redux-Saga and Re
 
 # Application Features
 
-- Give out a random Chuck Norris' joke 
+- Give out a random Chuck Norris' joke
 
 # Stack Technologies
 
@@ -12,7 +12,7 @@ I created this app in order to learn new technologies, such as Redux-Saga and Re
 - Redux
 - Redux-Saga
 - Chuck Norris API
- 
+
 # Testing
 
 To test the application, you need to enter the following commands:
@@ -23,8 +23,6 @@ After the repository has been copied, go to the repository and run the `npm inst
 
 Start the application using the `npm start`
 
-
 # Thanks for your attention
+
 You can contact me by this email storozhenko.dev@gmail.com
-
-
